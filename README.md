@@ -2,6 +2,28 @@
 
 This is an updated fork of [adulmec Active Campaign API wrapper](https://github.com/adulmec/active-campaign-python)
 
+### TBD:
+
+* update/review:
+** Deal
+** Group
+** List
+** User
+** Campaign
+** Form
+
+* add:
+** Organization
+** Settings
+** Single Sign ON
+** Site & Event Tracking
+** Webhook
+
+* Updated/Added:
+** Automation
+** Branding
+** Contact
+
 ## Installation
 
 You can install **active-campaign-python** by downloading the source.

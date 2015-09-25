@@ -10,19 +10,19 @@ class ActiveCampaign(Connector):
         Connector.__init__(self, url, api_key, api_user, api_pass)
 
     def api(self, path, post_data = {}):
-        # IE: "subscriber/view"
+        # IE: "contact/view"
         components = path.split('/')
         component = components[0]
 
         if '?' in components[1]:
             # query params appended to method
-            # IE: subscriber/edit?overwrite=0
+            # IE: contact/edit?overwrite=0
             method_arr = components[1].split('?')
             method = method_arr[0]
             params = method_arr[1]
         else:
             # just a method provided
-            # IE: "subscriber/view
+            # IE: "contact/view
             if components[1]:
                 method = components[1]
                 params = ''
@@ -34,16 +34,16 @@ class ActiveCampaign(Connector):
             # reserved word
             component = 'design'
         elif component == 'sync':
-            component = 'subscriber'
+            component = 'contact'
             method = 'sync'
         elif component == 'singlesignon':
             component = 'auth'
 
-        class1 = '%s' % component.capitalize() # IE: "subscriber" becomes "Subscriber"
-        source_module = __import__(class1, globals(), locals(), [], -1) # import Subscriber
-        class1 = getattr(source_module, class1) # get Subscriber
-        class1 = class1(ACTIVECAMPAIGN_URL, ACTIVECAMPAIGN_API_KEY) # Subscriber()
-        # subscriber.view()
+        class1 = '%s' % component.capitalize() # IE: "contact" becomes "contact"
+        source_module = __import__(class1, globals(), locals(), [], -1) # import contact
+        class1 = getattr(source_module, class1) # get contact
+        class1 = class1(ACTIVECAMPAIGN_URL, ACTIVECAMPAIGN_API_KEY) # contact()
+        # contact.view()
 
         if method == 'list':
             # reserved word

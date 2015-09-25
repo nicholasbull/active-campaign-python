@@ -1,8 +1,10 @@
+This is an updated fork of [adulmec Active Campaign API wrapper](https://github.com/adulmec/active-campaign-python)
+
 ## Installation
 
 You can install **active-campaign-python** by downloading the source.
 
-[Click here to download the source (.zip)](https://github.com/adulmec/active-campaign-python/zipball/master) which includes all dependencies.
+[Click here to download the source (.zip)](https://github.com/bubbl/active-campaign-python/zipball/master) which includes all dependencies.
 
 `from includes.ActiveCampaign import ActiveCampaign`
 
@@ -23,7 +25,7 @@ ac = ActiveCampaign(ACTIVECAMPAIGN_URL, ACTIVECAMPAIGN_API_KEY)
 print ac.api('account/view')
 </pre>
 
-See our [examples file](https://github.com/adulmec/active-campaign-python/blob/master/examples.py) or the comments from files in **includes** folder  for more in-depth samples.
+See our [examples file](https://github.com/bubbl/active-campaign-python/blob/master/examples.py) or the comments from files in **includes** folder  for more in-depth samples.
 
 ## Prerequisites
 

@@ -38,7 +38,7 @@ if __name__ == '__main__':
         'priority': 1,
         'charset': 'utf-8',
         'htmlconstructor': 'external',
-        'htmlfetch': 'http://notify.bartbania.co.uk/notification.php?segment=1&email=%EMAIL%',
+        'htmlfetch': 'http://www.example.com/notification.php?segment=1&email=%EMAIL%',
         'htmlfetchwhen': 'send',
         'p[1]': 1,
     }

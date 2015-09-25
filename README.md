@@ -5,24 +5,24 @@ This is an updated fork of [adulmec Active Campaign API wrapper](https://github.
 ### TBD:
 
 * update/review:
-** Deal
-** Group
-** List
-** User
-** Campaign
-** Form
+  - Deal
+  - Group
+  - List
+  - User
+  - Campaign
+  - Form
 
 * add:
-** Organization
-** Settings
-** Single Sign ON
-** Site & Event Tracking
-** Webhook
+  - Organization
+  - Settings
+  - Single Sign ON
+  - Site & Event Tracking
+  - Webhook
 
 * Updated/Added:
-** Automation
-** Branding
-** Contact
+  - Automation
+  - Branding
+  - Contact
 
 ## Installation
 

@@ -1,4 +1,3 @@
-
 from Config import ACTIVECAMPAIGN_URL, ACTIVECAMPAIGN_API_KEY
 from ActiveCampaign import ActiveCampaign
 import json

@@ -1,4 +1,3 @@
-
 from Config import ACTIVECAMPAIGN_URL, ACTIVECAMPAIGN_API_KEY
 from ActiveCampaign import ActiveCampaign
 import json
@@ -42,8 +41,8 @@ class Deal(ActiveCampaign):
         response = json.loads(urllib2.urlopen(req).read())
         return response
 
-    def note_edit(self, params, post_data):
-        request_url = '%s&api_action=deal_note_edit&api_output=%s' % (self.url, self.output)
+    def note_add(self, params, post_data = {}):
+        request_url = '%s&api_action=deal_note_add&api_output=%s' % (self.url, self.output)
         if params:
             request_url = '%s&%s' % (request_url, params)
         post_data = urllib.urlencode(post_data)
@@ -51,8 +50,8 @@ class Deal(ActiveCampaign):
         response = json.loads(urllib2.urlopen(req).read())
         return response
 
-    def note_add(self, params, post_data = {}):
-        request_url = '%s&api_action=deal_note_add&api_output=%s' % (self.url, self.output)
+    def note_edit(self, params, post_data):
+        request_url = '%s&api_action=deal_note_edit&api_output=%s' % (self.url, self.output)
         if params:
             request_url = '%s&%s' % (request_url, params)
         post_data = urllib.urlencode(post_data)

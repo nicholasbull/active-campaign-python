@@ -1,3 +1,4 @@
+
 from Config import ACTIVECAMPAIGN_URL, ACTIVECAMPAIGN_API_KEY
 from ActiveCampaign import ActiveCampaign
 import json
@@ -50,8 +51,96 @@ class Deal(ActiveCampaign):
         response = json.loads(urllib2.urlopen(req).read())
         return response
 
-    def note_edit(self, params, post_data):
-        request_url = '%s&api_action=deal_note_edit&api_output=%s' % (self.url, self.output)
+    def pipeline_add(self, params, post_data = {}):
+        request_url = '%s&api_action=deal_pipeline_add&api_output=%s' % (self.url, self.output)
+        if params:
+            request_url = '%s&%s' % (request_url, params)
+        post_data = urllib.urlencode(post_data)
+        req = urllib2.Request(request_url, post_data)
+        response = json.loads(urllib2.urlopen(req).read())
+        return response
+
+    def pipeline_delete(self, params, post_data = {}):
+        request_url = '%s&api_action=deal_pipeline_delete&api_output=%s&%s' % (self.url, self.output, params)
+        response = json.loads(urllib2.urlopen(request_url).read())
+        return response
+
+    def pipeline_edit(self, params, post_data):
+        request_url = '%s&api_action=deal_pipeline_edit&api_output=%s' % (self.url, self.output)
+        if params:
+            request_url = '%s&%s' % (request_url, params)
+        post_data = urllib.urlencode(post_data)
+        req = urllib2.Request(request_url, post_data)
+        response = json.loads(urllib2.urlopen(req).read())
+        return response
+
+    def pipeline_list(self, params, post_data = {}):
+        request_url = '%s&api_action=deal_pipeline_list&api_output=%s&%s' % (self.url, self.output, params)
+        response = json.loads(urllib2.urlopen(request_url).read())
+        return response
+
+    def stage_add(self, params, post_data = {}):
+        request_url = '%s&api_action=deal_stage_add&api_output=%s' % (self.url, self.output)
+        if params:
+            request_url = '%s&%s' % (request_url, params)
+        post_data = urllib.urlencode(post_data)
+        req = urllib2.Request(request_url, post_data)
+        response = json.loads(urllib2.urlopen(req).read())
+        return response
+
+    def stage_delete(self, params, post_data = {}):
+        request_url = '%s&api_action=deal_stage_delete&api_output=%s&%s' % (self.url, self.output, params)
+        response = json.loads(urllib2.urlopen(request_url).read())
+        return response
+
+    def stage_edit(self, params, post_data):
+        request_url = '%s&api_action=deal_stage_edit&api_output=%s' % (self.url, self.output)
+        if params:
+            request_url = '%s&%s' % (request_url, params)
+        post_data = urllib.urlencode(post_data)
+        req = urllib2.Request(request_url, post_data)
+        response = json.loads(urllib2.urlopen(req).read())
+        return response
+
+    def stage_list(self, params, post_data = {}):
+        request_url = '%s&api_action=deal_stage_list&api_output=%s&%s' % (self.url, self.output, params)
+        response = json.loads(urllib2.urlopen(request_url).read())
+        return response
+
+    def task_add(self, params, post_data = {}):
+        request_url = '%s&api_action=deal_task_add&api_output=%s' % (self.url, self.output)
+        if params:
+            request_url = '%s&%s' % (request_url, params)
+        post_data = urllib.urlencode(post_data)
+        req = urllib2.Request(request_url, post_data)
+        response = json.loads(urllib2.urlopen(req).read())
+        return response
+
+    def task_edit(self, params, post_data):
+        request_url = '%s&api_action=deal_task_edit&api_output=%s' % (self.url, self.output)
+        if params:
+            request_url = '%s&%s' % (request_url, params)
+        post_data = urllib.urlencode(post_data)
+        req = urllib2.Request(request_url, post_data)
+        response = json.loads(urllib2.urlopen(req).read())
+        return response
+
+    def tasktype_add(self, params, post_data = {}):
+        request_url = '%s&api_action=deal_tasktype_add&api_output=%s' % (self.url, self.output)
+        if params:
+            request_url = '%s&%s' % (request_url, params)
+        post_data = urllib.urlencode(post_data)
+        req = urllib2.Request(request_url, post_data)
+        response = json.loads(urllib2.urlopen(req).read())
+        return response
+
+    def tasktype_delete(self, params, post_data = {}):
+        request_url = '%s&api_action=deal_tasktype_delete&api_output=%s&%s' % (self.url, self.output, params)
+        response = json.loads(urllib2.urlopen(request_url).read())
+        return response
+
+    def tasktype_edit(self, params, post_data):
+        request_url = '%s&api_action=deal_tasktype_edit&api_output=%s' % (self.url, self.output)
         if params:
             request_url = '%s&%s' % (request_url, params)
         post_data = urllib.urlencode(post_data)

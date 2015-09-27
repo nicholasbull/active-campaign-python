@@ -16,12 +16,13 @@ This is an updated fork of [adulmec Active Campaign API wrapper](https://github.
   - Settings
   - Single Sign ON
   - Site & Event Tracking
-  - Webhook
 
 * Updated/Added:
   - Automation
   - Branding
   - Contact
+  - Deals
+  - Webhook
 
 ## Installation
 

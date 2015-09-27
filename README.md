@@ -5,7 +5,6 @@ This is an updated fork of [adulmec Active Campaign API wrapper](https://github.
 ### TBD:
 
 * update/review:
-  - Deal
   - Group
   - List
   - User
